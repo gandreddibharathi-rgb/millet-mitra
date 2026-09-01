@@ -2,13 +2,13 @@ const API='https://vgnmkikduqpiarxjbqpg.supabase.co/functions/v1/storefront-api'
 let products=[],categories=[],variants=[],razorpayEnabled=false,catalogueFallback=false;let cart=JSON.parse(localStorage.getItem('milletMitraCart')||'[]');let activeCategory='all';
 const $=id=>document.getElementById(id);const money=v=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(v||0);
 const IMAGE_MAP={
-'foxtail-millet':'https://www.yuvikaherbs.com/cdn/shop/files/Foxtail_Millets.webp?v=1772775744&width=1445',
-'little-millet':'https://laz-img-sg.alicdn.com/p/4ff8cfb0b4725d925a9bd5abccd67133.jpg',
-'kodo-millet':'https://tiimg.tistatic.com/fp/1/008/902/kodo-millet-156.jpg',
-'barnyard-millet':'https://cdn-dadkn.nitrocdn.com/sorWINhCcXSSLHEaMuKyjzsQObOaRIwB/assets/images/optimized/rev-69158a6/shopgulab.com/wp-content/uploads/2022/08/067A1469.png',
-'pearl-millet':'https://dukaan.b-cdn.net/700x700/webp/media/34c392ba-b3c0-4164-9241-ea8c3a1c7da8.jpg',
-'ragi-flour':'https://img2.exportersindia.com/product_images/bc-full/2025/4/13871295/untitled---1744188094_7987666_2444830.jpg',
-'jowar-flour':'https://www.jiomart.com/images/product/600x600/rvywfntprb/terragreens-organic-jowar-flour-500g-each-pack-of-2-product-images-orvywfntprb-p591755703-0-202205310846.jpg',
+'foxtail-millet':'https://img500.exportersindia.com/product_images/bc-500/2025/3/13220876/foxtail-millet-korra-italian-millet-1742363952-7939194.jpg',
+'little-millet':'https://i.ebayimg.com/images/g/uacAAOSwBDRgMHxt/s-l1200.jpg',
+'kodo-millet':'https://static.wixstatic.com/media/97ef3e_c58c2a9115eb464f8ae5995784334ef8~mv2.jpg/v1/fill/w_480%2Ch_480%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/97ef3e_c58c2a9115eb464f8ae5995784334ef8~mv2.jpg',
+'barnyard-millet':'https://cdn.shopaccino.com/edible-smart/products/barnyard-millet--oodal-900293_l.jpg?v=680',
+'pearl-millet':'https://best-remedies.com/assets/uploads/article/7e8eb-pic4.jpg',
+'ragi-flour':'https://mittalorganics.com/cdn/shop/files/11_c2f09593-9fc3-4a9b-9406-6dc8bd4390e3.webp?v=1704729851&width=1445',
+'jowar-flour':'https://gokulamgir.com/cdn/shop/files/IMG-7590.jpg?v=1750769528',
 'ragi-cookies':'https://www.manavurufoods.com/web/image/product.product/4/image_1920?unique=8596a7e',
 'millet-murukku':'https://naturessoulshop.com/cdn/shop/files/Millet-Murukku-_E2_80_93-TruMillets-_E2_80_93-125gm.jpg?v=1743192839',
 'millet-mixture':'https://healthyfoodss.com/cdn/shop/files/1_6c61b699-3ed4-46c9-8914-bf6bc8a74070.jpg?v=1744200026',
