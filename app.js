@@ -13,7 +13,7 @@ const IMAGE_MAP={
 'ragi-cookies':'https://www.manavurufoods.com/web/image/product.product/4/image_1920?unique=8596a7e',
 'millet-murukku':'https://naturessoulshop.com/cdn/shop/files/Millet-Murukku-_E2_80_93-TruMillets-_E2_80_93-125gm.jpg?v=1743192839',
 'millet-mixture':'https://healthyfoodss.com/cdn/shop/files/1_6c61b699-3ed4-46c9-8914-bf6bc8a74070.jpg?v=1744200026',
-'ragi-laddu':'https://commons.wikimedia.org/wiki/Special:FilePath/Ragi_laddu_-_Finger_Millet_Laddu.jpg',
+'ragi-laddu':'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ragi_laddu_-_Finger_Millet_Laddu.jpg/450px-Ragi_laddu_-_Finger_Millet_Laddu.jpg',
 'millet-chikkies':'https://cdn.grofers.com/da/cms-assets/cms/product/43819255-b3bd-4bf9-8693-aa513a385ee6.jpg'};
 const starterCategories=[{id:'grains',name:'Millet Grains'},{id:'snacks',name:'Millet Snacks'},{id:'flours',name:'Millet Flours'}];
 const starterProducts=[
